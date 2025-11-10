@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; } body {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+    }
+    pre, code {
+        font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+    }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgdd949b3">1. API</a></li>
+<li><a href="#orgfe6e7f8">2. Exemplo</a></li>
+<li><a href="#orgf2ddfc7">3. Prática</a>
+<ul>
+<li><a href="#org5bb3ce0">3.1. Solução</a></li>
+</ul>
+</li>
+<li><a href="#orgdf4fe46">4. Exercício</a></li>
+<li><a href="#org7da127e">5. Soma</a></li>
+<li><a href="#org129e63c">6. POST</a></li>
+<li><a href="#org4783549">7. Prática</a>
+<ul>
+<li><a href="#orgf87c7d2">7.1. Solução</a></li>
+</ul>
+</li>
+<li><a href="#org20478aa">8. Exercício</a></li>
+<li><a href="#org3edd78a">9. Envio</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdd949b3" class="outline-2">
+<h2 id="orgdd949b3"><span class="section-number-2">1.</span> API</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Uma API é um conjunto de regras e protocolos que permitem a comunicação entre diferentes softwares ou sistemas.
+</p>
+
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" font-size="14">
+  <!-- Retângulo Android -->
+  <rect x="20" y="70" width="100" height="50" fill="#7FB3D5" stroke="#333" stroke-width="2" rx="8" ry="8"/>
+  <text x="70" y="100" fill="#fff" font-weight="bold" text-anchor="middle" alignment-baseline="middle">Android</text>
+
+  <!-- Caixa API -->
+  <rect x="200" y="60" width="100" height="70" fill="#76D7C4" stroke="#333" stroke-width="2" rx="8" ry="8"/>
+  <text x="250" y="95" fill="#000" font-weight="bold" text-anchor="middle" alignment-baseline="middle">API</text>
+
+  <!-- Caixas SOMA, SUB, DIV, MULTI -->
+  <rect x="380" y="30" width="80" height="30" fill="#F7DC6F" stroke="#333" stroke-width="2" rx="6" ry="6"/>
+  <text x="420" y="50" fill="#000" font-weight="bold" text-anchor="middle" alignment-baseline="middle">SOMA</text>
+
+  <rect x="380" y="70" width="80" height="30" fill="#F7DC6F" stroke="#333" stroke-width="2" rx="6" ry="6"/>
+  <text x="420" y="90" fill="#000" font-weight="bold" text-anchor="middle" alignment-baseline="middle">SUB</text>
+
+  <rect x="380" y="110" width="80" height="30" fill="#F7DC6F" stroke="#333" stroke-width="2" rx="6" ry="6"/>
+  <text x="420" y="130" fill="#000" font-weight="bold" text-anchor="middle" alignment-baseline="middle">DIV</text>
+
+  <rect x="380" y="150" width="80" height="30" fill="#F7DC6F" stroke="#333" stroke-width="2" rx="6" ry="6"/>
+  <text x="420" y="170" fill="#000" font-weight="bold" text-anchor="middle" alignment-baseline="middle">MULTI</text>
+
+  <!-- Setas -->
+  <!-- Android -> API -->
+  <line x1="120" y1="95" x2="200" y2="95" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- API -> SOMA -->
+  <line x1="300" y1="95" x2="380" y2="45" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Definição da seta -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
+
+<svg width="650" height="220" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" font-size="14">
+  <!-- Retângulo Android -->
+  <rect x="20" y="70" width="100" height="50" fill="#7FB3D5" stroke="#333" stroke-width="2" rx="8" ry="8"/>
+  <text x="70" y="100" fill="#fff" font-weight="bold" text-anchor="middle" alignment-baseline="middle">Android</text>
+
+  <!-- Caixa API -->
+  <rect x="250" y="60" width="100" height="70" fill="#76D7C4" stroke="#333" stroke-width="2" rx="8" ry="8"/>
+  <text x="300" y="95" fill="#000" font-weight="bold" text-anchor="middle" alignment-baseline="middle">API</text>
+
+  <!-- Caixas SOMA, SUB, DIV, MULTI -->
+  <rect x="450" y="30" width="80" height="30" fill="#F7DC6F" stroke="#333" stroke-width="2" rx="6" ry="6"/>
+  <text x="490" y="50" fill="#000" font-weight="bold" text-anchor="middle" alignment-baseline="middle">SOMA</text>
+
+  <rect x="450" y="70" width="80" height="30" fill="#F7DC6F" stroke="#333" stroke-width="2" rx="6" ry="6"/>
+  <text x="490" y="90" fill="#000" font-weight="bold" text-anchor="middle" alignment-baseline="middle">SUB</text>
+
+  <rect x="450" y="110" width="80" height="30" fill="#F7DC6F" stroke="#333" stroke-width="2" rx="6" ry="6"/>
+  <text x="490" y="130" fill="#000" font-weight="bold" text-anchor="middle" alignment-baseline="middle">DIV</text>
+
+  <rect x="450" y="150" width="80" height="30" fill="#F7DC6F" stroke="#333" stroke-width="2" rx="6" ry="6"/>
+  <text x="490" y="170" fill="#000" font-weight="bold" text-anchor="middle" alignment-baseline="middle">MULTI</text>
+
+  <!-- Setas -->
+  <!-- SOMA -> API com legenda 'resposta' -->
+  <line x1="450" y1="45" x2="350" y2="95" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="400" y="55" fill="#333" font-style="italic" font-size="12" text-anchor="middle">resposta</text>
+
+  <!-- API -> Android com legenda 'JSON' -->
+  <line x1="250" y1="95" x2="120" y2="95" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="185" y="85" fill="#333" font-style="italic" font-size="12" text-anchor="middle">JSON</text>
+
+  <!-- Definição da seta -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
+</div>
+</div>
+
+
+<div id="outline-container-orgfe6e7f8" class="outline-2">
+<h2 id="orgfe6e7f8"><span class="section-number-2">2.</span> Exemplo</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Se uma requisição é feita à: <a href="https://jsonplaceholder.typicode.com/posts/1">https://jsonplaceholder.typicode.com/posts/1</a>
+</p>
+
+<dl class="org-dl">
+<dt>/posts</dt><dd>indica que queremos um post.</dd>
+<dt>/1</dt><dd>indica o número do id do post.</dd>
+</dl>
+
+<p>
+O resultado é o seguinte JSON:
+</p>
+
+<pre class="example" id="orga19543e">
+{
+  "userId": 1,
+  "id": 1,
+  "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+  "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+}
+</pre>
+
+<p>
+É possível retornar XML, JSON ou mesmo texto simples. O mais recomendado é o formato JSON pela facilidade e quantidade de linguagens que possuem métodos embutidos para o trabalho com JSON.
+</p>
+
+<p>
+Como ficaria uma página HTML/JS que consome o conteúdo da resposta:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Acessa e mostra o resultado&lt;/title&gt;
+    &lt;script&gt;
+	window.onload = inicio;
+
+	function inicio() {
+	    var botao = document.getElementById('buscar');
+	    botao.addEventListener('click', busca_e_mostra);
+	}
+
+	function busca_e_mostra() {
+	    const xhttp = new XMLHttpRequest();
+	    xhttp.onload = function () {
+		var resultado = this.responseText;
+		var objeto = JSON.parse(resultado);
+		var saida = document.getElementById('resposta');
+		saida.innerHTML = objeto.title;
+	    }
+	    xhttp.open("GET", "https://jsonplaceholder.typicode.com/posts/1");
+	    xhttp.send();
+	}
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;p id='resposta'&gt;&lt;/p&gt;
+    &lt;form action=""&gt;
+	&lt;input type="button" value="Buscar" id='buscar'&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;  
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf2ddfc7" class="outline-2">
+<h2 id="orgf2ddfc7"><span class="section-number-2">3.</span> Prática</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+<b>A</b>. Receba do usuário o número do <i>post</i> e mostre o <b>title</b> de acordo com o número selecionado.
+</p>
+</div>
+
+</body>
+</html>
